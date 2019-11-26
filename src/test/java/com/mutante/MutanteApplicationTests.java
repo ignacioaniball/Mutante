@@ -1,27 +1,39 @@
 package com.mutante;
 
-import static org.mockito.Mockito.when;
-
-import java.security.cert.CertPathChecker;
-import java.util.ArrayList;
+import static org.hamcrest.CoreMatchers.is;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.BDDMockito.Then;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.mutante.service.MutanteService;
+import com.mutante.entity.Mutante;
+
+import io.restassured.RestAssured;
 
 @SpringBootTest
 class MutanteApplicationTests {
+//	private static String baseUri = "http://localhost:8081/v1/";
+//
+//	public String[] adnHuman = {"ATGCGA", "CAGTGC", "TTGTGT", "AGATGG", "CCATTA", "TCACTG"};
+//	public String[] adnMutante = {"AAAAAA", "AAAAAA", "AAAAAA", "AAAAAA", "AAAAAA", "AAAAAA"};
+//	public String[] onlyOneRow = {"AAAAAA", "CAGTGC", "TTGTGT", "AGAAGG", "CCATCA", "TCACTG"};
+//	public String[] onlyOneColumn = {"ATGCGA", "AAGTGC", "ATGTGT", "AGAAGG", "CCATCA", "TCACTG"};
+//	
+//	@Test
+//	public void whenRequestingMutantServiceWithMutantADN() {
+//		
+//		 String mutant = RestAssured
+//				.given()
+//					.baseUri(baseUri)
+//					.and()
+//					.queryParam("format", "json")
+//					.log().all()
+//					.body(adnMutante)
+//				.when()
+//					.post("/mutant")
+//				.then()
+//					.log().all()
+//	                .and().assertThat().statusCode(is(equals(200)))
+//	                .and().extract().body().asString();
+//	}
 
-	MutanteService mutanteService;
-//	String[] adnMutante = new ArrayList<String>()["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"];
-	@Test
-	void contextLoads() {
-	}
-	
-	@Test
-	public void checkMutante() {
-//		when(mutanteService.isMutant(dna)) Then<T>
-	}	
 }

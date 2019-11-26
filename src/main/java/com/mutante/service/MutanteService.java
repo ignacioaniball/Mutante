@@ -52,9 +52,9 @@ public class MutanteService {
 				
 				for (int indexCell = 0; indexCell < adnBasedTable.column(indexColumn).size(); indexCell++) {
 
-					if (adnBasedTable.get(indexColumn, indexRow).contains(adnBasedTable.get(indexColumn, indexCell))) {
+					if (adnBasedTable.get(indexColumn, indexRow).contains(adnBasedTable.get(indexCell, indexColumn ))) {
 						countColumn++;
-						if (countColumn.equals(4)) {
+						if (countColumn.equals(MATCHER)) {
 							flagColumn = true;
 						}
 					} else {
@@ -62,8 +62,8 @@ public class MutanteService {
 					}
 					
 					if (adnBasedTable.get(indexRow, indexRow).contains(adnBasedTable.get(indexCell, indexCell))) {
-						countColumn++;
-						if (countColumn.equals(4)) {
+						countDiagonal++;
+						if (countDiagonal.equals(MATCHER)) {
 							flagDiagonal = true;
 						}
 					} else {
