@@ -56,6 +56,9 @@ public class MutanteService {
 						countColumn++;
 						if (countColumn.equals(MATCHER)) {
 							flagColumn = true;
+							if(flagColumn == true) {
+								break;
+							}
 						}
 					} else {
 						countColumn = 0;
@@ -65,6 +68,9 @@ public class MutanteService {
 						countDiagonal++;
 						if (countDiagonal.equals(MATCHER)) {
 							flagDiagonal = true;
+							if(flagDiagonal == true) {
+								break;
+							}
 						}
 					} else {
 						countDiagonal = 0;
